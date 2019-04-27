@@ -48,7 +48,7 @@ export default withAuth(
             If you are a member, please sign in below
           </p>
           <button className="btn btn-dark btn-lg" onClick={this.login}>
-            Login
+            Login or Sign up
           </button>
         </div>
       );
