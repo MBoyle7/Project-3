@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-class Navbar extends Component {
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import './MyNavbar.css';
+
+
+export default class MyNavbar extends Component {
   render() {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
@@ -28,6 +32,21 @@ class Navbar extends Component {
                   Members
                 </Link>
               </li>
+              <li className="nav-item">
+              <Link className = "nav-link" to ="/beer">
+                Beer
+              </Link>
+              </li>
+              <li className ="nav-item">
+              <Link className = "nav-link" to = "/wine">
+                Wine
+              </Link>
+              </li>
+              <li className = "nav-item">
+              <Link className = "nav-link" to ="/beer">
+                Liquor
+              </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -36,5 +55,23 @@ class Navbar extends Component {
   }
 }
 
+// export default class MyNavbar extends Component {
+//     render() {
+//         return (
+//             <Navbar bg="dark" variant="dark" fixed="top">
+//             <Navbar.Brand href="/home">BoozeApp</Navbar.Brand>
+//             <Nav className="mr-auto">
+//                 <Nav.Link href="/" to="/">Home</Nav.Link>
+//                 <Nav.Link href="/beer" to="/beer">Beer</Nav.Link>
+//                 <Nav.Link href="/wine" to="/wine">Wine</Nav.Link>
+//                 <Nav.Link href="/liquor" to="/liquor">Liquor</Nav.Link>
+//                 <Nav.Link href="/breweries" to="/breweries">Breweries</Nav.Link>
+//                 <Nav.Link href="/Members" to = "/Members">Members</Nav.Link>
+//             </Nav>
+//             </Navbar>
+//         )
+//     }
+// }
 
-export default Navbar;
+
+// export default Navbar;

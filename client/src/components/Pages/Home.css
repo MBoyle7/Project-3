@@ -1,0 +1,19 @@
+.jumbotron {
+    margin-top: 75px;
+    margin-bottom: 4em;
+}
+.pic-wrapper {
+    margin-bottom: 2em;
+}
+.booze-pic {
+    width: 85%;
+}
+.btn-primary {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    background-color: #2892D7;
+}
+h3 {
+    margin-top: 1em;
+}

@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 
 import Navbar from './components/layout/Navbar';
 import Home from './components/Pages/Home';
 import Members from './components/Pages/Members';
 import Login from './components/auth/Login';
+
+import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Beer from './components/Pages/Beer/Beer'
+import Wine from './components/Pages/Wine/Wine'
+import Liquor from './components/Pages/Liquor/Liquor'
+import Breweries from './components/Pages/Breweries/Breweries'
+// import MyNavbar from './components/MyNavbar'
+import { isTemplateElement } from '@babel/types';
 
 import './App.css';
 class App extends Component {
@@ -39,6 +47,21 @@ class App extends Component {
       // </div>
     );
   }
+
+  // render() {
+  //     return (
+  //       <Router>
+  //         <div>
+  //           <Navbar />
+  //           <Route exact path="/" component={Home} />
+  //           <Route path="/beer" component={Beer} />
+  //           <Route path="/wine" component={Wine} />
+  //           <Route path="/liquor" component={Liquor} />
+  //           <Route path="/Breweries" component={Breweries} />
+  //         </div>
+  //       </Router>
+  //     );
+  //   }
 }
 
 export default App;
