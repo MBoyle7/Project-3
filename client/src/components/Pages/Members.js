@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Jumbotron, Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./Home.css";
-
+import winepic from './assets/wineImg.jpg'
+import liqpic from './assets/liquorImg.jpg'
+import beerpic from './assets/beerImg.jpg'
 class Members extends Component {
   state = {
     currentUserName: "",
@@ -33,16 +35,16 @@ class Members extends Component {
         <Row className="show-grid text-center">
           <Col xs={12} sm={4} className="pic-wrapper">
             <Image
-              src="assets/beerImg.jpg"
+              src={beerpic}
               className="booze-pic"
               roundedCircle
             />
             <h3>Beer</h3>
-            <p>Click here to find all of your favorite beers!</p>
+            <p>Click here to f ind all of your favorite beers!</p>
           </Col>
           <Col xs={12} sm={4} className="pic-wrapper">
             <Image
-              src="assets/wineImg.jpg"
+              src={winepic}
               className="booze-pic"
               roundedCircle
             />
@@ -51,7 +53,7 @@ class Members extends Component {
           </Col>
           <Col xs={12} sm={4} className="pic-wrapper">
             <Image
-              src="../assets/liquorImg.jpg"
+              src= {liqpic}
               className="booze-pic"
               roundedCircle
             />
