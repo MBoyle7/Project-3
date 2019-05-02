@@ -8,7 +8,9 @@ export default class Liquor extends Component {
         return (
             <Container>
                 <Jumbotron>
-                    liquor
+                <div className="App">
+         <h1>Tell us About Your Most Recent Slug of Hooch</h1>
+       </div>      
                 </Jumbotron>
             </Container>
         )

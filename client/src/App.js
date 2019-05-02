@@ -13,12 +13,13 @@ import Wine from './components/Pages/Wine/Wine'
 import Liquor from './components/Pages/Liquor/Liquor'
 import Breweries from './components/Pages/Breweries/Breweries'
 // import MyNavbar from './components/MyNavbar'
-import { isTemplateElement } from '@babel/types';
+//import { isTemplateElement } from '@babel/types';
 
 import './App.css';
 class App extends Component {
   render() {
     return (
+     
       <Router>
       <Security
         issuer="https://dev-122012.okta.com/oauth2/default" 
@@ -36,32 +37,22 @@ class App extends Component {
                 render={() => (
                   <Login baseUrl="https://dev-122012.oktapreview.com" />
                 )}
-              />
+              /> 
+              <Route exact path="/" component={Home} />
+             <Route path="/beer" component={Beer} />
+             <Route path="/wine" component={Wine} />
+             <Route path="/liquor" component={Liquor} />
+             <Route path="/Breweries" component={Breweries} />
               <Route path="/implicit/callback" component={ImplicitCallback} />
             </div>
           </div>
         </Security>
       </Router>
-      // <div className="App">
-      //   <h1>Tell us About Your Most Recent Slug of Hooch</h1>
-      // </div>
+      
     );
   }
 
-  // render() {
-  //     return (
-  //       <Router>
-  //         <div>
-  //           <Navbar />
-  //           <Route exact path="/" component={Home} />
-  //           <Route path="/beer" component={Beer} />
-  //           <Route path="/wine" component={Wine} />
-  //           <Route path="/liquor" component={Liquor} />
-  //           <Route path="/Breweries" component={Breweries} />
-  //         </div>
-  //       </Router>
-  //     );
-  //   }
+  
 }
 
 export default App;
