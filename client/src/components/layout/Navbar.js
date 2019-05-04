@@ -43,7 +43,7 @@ export default class MyNavbar extends Component {
               </Link>
               </li>
               <li className = "nav-item">
-              <Link className = "nav-link" to ="/beer">
+              <Link className = "nav-link" to ="/liquor">
                 Liquor
               </Link>
               </li>
