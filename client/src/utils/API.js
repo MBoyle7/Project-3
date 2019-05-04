@@ -18,6 +18,6 @@ export default {
     return axios.post('/api/wine', bookData)
   },
   getBeer: function (queryTem) {
-    return axios.get('/api/beers/beer=' + queryTem)
+    return axios.get('/api/beers/?beer=' + queryTem)
   }
 }

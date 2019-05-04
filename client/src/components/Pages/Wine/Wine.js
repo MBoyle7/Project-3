@@ -14,18 +14,17 @@ export default class Beer extends Component {
     this.state = {
       beerInput: '',
       beers: [],
-      isLoaded: false,
-      
+      isLoaded: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount () {
-    console.log('component mount');
-    // "https://quiniwine.com"
-    this.loadBeers()
-  }
+  // componentDidMount () {
+  //   console.log('component mount')
+  //   // "https://quiniwine.com"
+  //   this.loadBeers()
+  // }
   loadBeers = () => {
     API.getBeer().then(result => {
       console.log(result)
@@ -38,18 +37,16 @@ export default class Beer extends Component {
   }
 
   handleChange (event) {
-    event.preventDefault();
+    event.preventDefault()
     this.setState({ beerInput: event.target.value })
   }
   handleSubmit (event) {
     event.preventDefault()
     API.getBeer(this.state.beerInput).then(response => {
       console.log(response)
-      this.setState({beerData: response.data });
-      this.setState({beerInput:''});
-
-      
-    });
+      this.setState({ beerData: response.data })
+      this.setState({ beerInput: '' })
+    })
     // Axios.get(beerURL + apiKey + this.state.value)
     //   .then(res => res.json())
     //   .then(json => {
@@ -90,11 +87,9 @@ export default class Beer extends Component {
         {
           <div>
             <ul>
-            {this.state.beers.map(beer => (
-                <li key = {beer.id}>
-                  Name: {beer.name}
-                </li>
-            ))}
+              {this.state.beers.map(beer => (
+                <li key={beer.id}>Name: {beer.name}</li>
+              ))}
             </ul>
           </div>
         }
