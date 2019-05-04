@@ -8,9 +8,9 @@ import Login from './components/auth/Login';
 
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Beer from './components/Pages/Beer/Beer'
+
 import Wine from './components/Pages/Wine/Wine'
-import Liquor from './components/Pages/Liquor/Liquor'
+
 import Breweries from './components/Pages/Breweries/Breweries'
 // import MyNavbar from './components/MyNavbar'
 //import { isTemplateElement } from '@babel/types';
@@ -39,9 +39,9 @@ class App extends Component {
                 )}
               /> 
               <Route exact path="/" component={Home} />
-             <Route path="/beer" component={Beer} />
+             
              <Route path="/wine" component={Wine} />
-             <Route path="/liquor" component={Liquor} />
+          
              <Route path="/Breweries" component={Breweries} />
               <Route path="/implicit/callback" component={ImplicitCallback} />
             </div>
