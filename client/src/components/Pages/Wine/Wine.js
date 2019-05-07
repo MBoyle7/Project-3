@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 import { Jumbotron, Container, Button, Form } from 'react-bootstrap'
 import './Wine.css'
 import Axios from 'axios'
 import API from '../../../utils/API'
-
+import {list,ListItem} from "../../../components/List";
 var wineName = ''
 var beerURL = 'https://sandbox-api.brewerydb.com/v2/'
 const apiKey = 'f1cd99daef522dc34a820c854fb10e79'
@@ -14,27 +14,14 @@ export default class Beer extends Component {
     this.state = {
       beerInput: '',
       beers: [],
+      name:'',
       isLoaded: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  // componentDidMount () {
-  //   console.log('component mount')
-  //   // "https://quiniwine.com"
-  //   this.loadBeers()
-  // }
-  loadBeers = () => {
-    API.getBeer().then(result => {
-      console.log(result)
-      this.setState({
-        value: '',
-        isLoaded: true,
-        beers: result
-      })
-    })
-  }
+
 
   handleChange (event) {
     event.preventDefault()
@@ -44,18 +31,10 @@ export default class Beer extends Component {
     event.preventDefault()
     API.getBeer(this.state.beerInput).then(response => {
       console.log(response)
-      this.setState({ beerData: response.data })
+      this.setState({ beers: response.data })
       this.setState({ beerInput: '' })
     })
-    // Axios.get(beerURL + apiKey + this.state.value)
-    //   .then(res => res.json())
-    //   .then(json => {
-    //     this.setState({
-    //       value: '',
-    //       isLoaded: true,
-    //       Wines: json
-    //     })
-    //   })
+
   }
 
   render () {
@@ -66,11 +45,7 @@ export default class Beer extends Component {
           <h1>Beer</h1>
         </Jumbotron>
         <h5>Search for your new favorite beer here!</h5>
-        <Form.Control
-          className='beerInput'
-          type='text'
-          placeholder='Search here...'
-        />
+       
         <br />
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -88,7 +63,24 @@ export default class Beer extends Component {
           <div>
             <ul>
               {this.state.beers.map(beer => (
-                <li key={beer.id}>Name: {beer.name}</li>
+                <ListItem key={beer._id}>
+                 <Link to={"/beers/" + beer._id}>
+                   <strong>
+                      Style:
+                     {beer.name}
+                     <br></br>
+                     Alcohol by Volume: 
+        
+                     {beer.abvMax}
+                     <br></br>
+                     IBU's:
+                     {beer.ibuMax}
+                     <br></br>
+                     Brewery:
+                     {beer.category.name}
+                   </strong>
+                 </Link>
+               </ListItem>
               ))}
             </ul>
           </div>
