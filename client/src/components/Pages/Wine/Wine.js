@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import { Jumbotron, Container, Button, Form } from 'react-bootstrap'
+import { Carousel, Jumbotron, Image, Button, Form } from 'react-bootstrap'
 import './Wine.css'
 import Axios from 'axios'
 import API from '../../../utils/API'
 import {list,ListItem} from "../../../components/List";
+
 var wineName = ''
 var beerURL = 'https://sandbox-api.brewerydb.com/v2/'
 const apiKey = 'f1cd99daef522dc34a820c854fb10e79'
@@ -40,10 +41,24 @@ export default class Beer extends Component {
   render () {
     const { isLoaded, beers } = this.state
     return (
-      <Container>
-        <Jumbotron>
-          <h1>Beer</h1>
-        </Jumbotron>
+      <div>
+      <Carousel class ="carousel">
+       <h1>What Care I How Time Advances? I Am Drinking Ale Today
+       <br></br><br></br><br></br>
+         ~Edgar Allen Poe
+       </h1>
+        <h1>He Was A Wise Man Who Invented Beer.
+        <br></br><br></br><br></br>
+          ~ Plato
+          </h1>
+      <h1>Beer Is Proof That God Loves Us And Wants Us To Be Happy
+        <br></br><br></br><br></br>
+        ~ Ben Franklin
+      </h1>
+    </Carousel>
+  
+      <Jumbotron>
+       
         <h5>Search for your new favorite beer here!</h5>
        
         <br />
@@ -85,7 +100,8 @@ export default class Beer extends Component {
             </ul>
           </div>
         }
-      </Container>
-    )
+      </Jumbotron>
+      </div>
+      )
   }
 }
