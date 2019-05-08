@@ -37,7 +37,7 @@ class App extends Component {
                   <Login baseUrl='https://dev-122012.oktapreview.com' />
                 )}
               />
-              <Route exact path='/' component={Home} />
+              {/* <Route exact path='/' component={Home} /> */}
 
               <Route path='/wine' component={Wine} />
 

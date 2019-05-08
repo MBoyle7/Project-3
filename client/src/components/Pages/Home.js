@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '@okta/okta-react';
+import "./Home.css";
 
 export default withAuth(
   class Home extends Component {
@@ -35,8 +36,8 @@ export default withAuth(
       const mainContent = this.state.authenticated ? (
         <div>
           <p className="lead">
-            You have entered the member portal,{' '}
-            <Link to="/staff">click here</Link>
+            You Have Entered The Member Portal,{' '}
+            <Link to="/Members">Click Here.</Link>
           </p>
           <button className="btn btn-light btn-lg" onClick={this.logout}>
             Logout
@@ -45,17 +46,17 @@ export default withAuth(
       ) : (
         <div>
           <p className="lead">
-            If you are a member, please sign in below
+            If You Are A Member, Please Sign In Below.
           </p>
           <button className="btn btn-dark btn-lg" onClick={this.login}>
-            Login or Sign up
+            Login Or Sign Up
           </button>
         </div>
       );
 
       return (
         <div className="jumbotron">
-          <h1 className="display-4">BoozeIt Member Login</h1>
+          <h1 className="display-8">BoozeIt Members Login</h1>
           {mainContent}
         </div>
       );
