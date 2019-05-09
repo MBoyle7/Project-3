@@ -41,8 +41,13 @@ export default class Beer extends Component {
   render () {
     const { isLoaded, beers } = this.state
     return (
+
       <div className="app-picture">
+
+      
+
       <Carousel class ="carousel">
+      
        <h1>What Care I How Time Advances? I Am Drinking Ale Today
        <br></br><br></br><br></br>
          ~Edgar Allen Poe
@@ -99,9 +104,12 @@ export default class Beer extends Component {
               ))}
             </ul>
           </div>
+          
         }
+        
       </Jumbotron>
+     
       </div>
-      )
+      ) 
   }
 }

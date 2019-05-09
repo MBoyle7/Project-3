@@ -20,9 +20,11 @@ class Members extends Component {
   }
 
   render() {
+   
     const { currentUserEmail, currentUserName } = this.state;
 
     return (
+     <div className = "hopps">
       <Container>
         <Jumbotron>
           <h2>Welcome {currentUserName} to BoozeIt!</h2>
@@ -68,7 +70,9 @@ class Members extends Component {
           </Col>
         </Row>
       </Container>
-    );
+        </div>
+    )
+  
   }
 }
 
