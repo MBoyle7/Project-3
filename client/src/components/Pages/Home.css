@@ -1,8 +1,19 @@
+.background-image {
+    background-image: url("https://b.zmtcdn.com/data/pictures/3/18673963/21c478f3827708c444d89b6c0d7819b0_featured_v2.jpg");
+    background-size:cover;
+    width: 100vw;
+    height: 200vh;
+    position: absolute;
+    top:0;
+    left:0;
+    padding-top:75px;
+    z-index: -1;
+}
 .jumbotron {
     margin-top: 75px;
     margin-bottom: 4em;
     background-color: rgb(13, 83, 85);
-    opacity: 0.5;
+    
 }
 .pic-wrapper {
     margin-bottom: 2em;
@@ -26,4 +37,5 @@ h3 {
 .lead {
     font-size: 35px;
     color: #FFF;
+    opacity: 0;
 }
