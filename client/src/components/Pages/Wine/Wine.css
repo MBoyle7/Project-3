@@ -13,3 +13,15 @@ h3 {
     height: 250px;
     width: 100%;
 }
+.background{
+    background: url("../assets/insidebeer.jpg");
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    padding-top:75px;
+    z-index: -1;
+
+}

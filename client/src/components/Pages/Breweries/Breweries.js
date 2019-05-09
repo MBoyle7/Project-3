@@ -79,8 +79,10 @@ export default class Breweries extends Component {
 
     if (!isLoaded) {
       return <div>Loading...</div>
+
     } else {
       return (
+        <div className = "brew">
         <Container>
           <Jumbotron>
             <h1>Breweries</h1>
@@ -112,7 +114,7 @@ export default class Breweries extends Component {
                     </FormBtn> */}
           <br />
           <div>
-            <ul>
+            <ul >
               {breweries.map(brewery => (
                 <li key={brewery.id}>
                   <a rel='noopener noreferrer' target='_blank' href={brewery.website_url}>{brewery.name}</a> | {brewery.city}, {brewery.state}
@@ -120,12 +122,13 @@ export default class Breweries extends Component {
               ))}
             </ul>
           </div>
-          <br />
-          <MapContainer>
+        
+          <MapContainer className = "map">
 
           </MapContainer>
         
         </Container>
+        </div>
       )
     }
   }
