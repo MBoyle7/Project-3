@@ -1,0 +1,10 @@
+.brew {
+  background: url("../assets/BreweriesImg.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 200vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
