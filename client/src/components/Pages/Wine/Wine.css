@@ -1,15 +1,33 @@
+.app-picture {
+    background-image:url("https://www.insidesources.com/wp-content/uploads/2018/07/bigstock-The-Beer-Taps-In-A-Pub-Nobody-227877709.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 h1 {
     float:left;
-    
-    color: rgb(224, 173, 173);
+    color: rgb(150, 58, 58);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h3 {
     color: #000;
     font-style: italic;
 }
+h5 {
+    color: white;
+}
 .carousel {
-    background-color: rgb(17, 17, 85);
+    background: rgba(231, 231, 186, 0.55);
     height: 250px;
     width: 100%;
+
+    
 }
+
+.jumbotron {
+    background: rgba(47, 97, 64, 0.95);
+}
+ label {
+     color: white;
+ }

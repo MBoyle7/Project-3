@@ -1,0 +1,7 @@
+.app-container {
+    background-image: url("https://www.insidesources.com/wp-content/uploads/2018/07/bigstock-The-Beer-Taps-In-A-Pub-Nobody-227877709.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}

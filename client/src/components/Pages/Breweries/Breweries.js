@@ -85,7 +85,7 @@ export default class Breweries extends Component {
           <Jumbotron>
             <h1>Breweries</h1>
           </Jumbotron>
-          <h5>Search for your new favorite brewery here!</h5>
+          <h5>Search For Your New Favorite Brewery Here!</h5>
           {/* <Input
                       value={this.state.userSearch}
                       onChange={this.handleInputChange}

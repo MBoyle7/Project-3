@@ -19,6 +19,7 @@ import './App.css'
 class App extends Component {
   render () {
     return (
+      <div className="app-container">
       <Router>
         <Security
           issuer='https://dev-122012.okta.com/oauth2/default'
@@ -47,6 +48,7 @@ class App extends Component {
           </div>
         </Security>
       </Router>
+      </div>
     )
   }
 }
