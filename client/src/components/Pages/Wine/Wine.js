@@ -41,8 +41,11 @@ export default class Beer extends Component {
   render () {
     const { isLoaded, beers } = this.state
     return (
-      <div className = "background">
+
+      <div className="app-picture">
+
       
+
       <Carousel class ="carousel">
       
        <h1>What Care I How Time Advances? I Am Drinking Ale Today
@@ -61,7 +64,7 @@ export default class Beer extends Component {
   
       <Jumbotron>
        
-        <h5>Search for your new favorite beer here!</h5>
+        <h5>Search For Your New Favorite Beer Here!</h5>
        
         <br />
         <form onSubmit={this.handleSubmit}>
