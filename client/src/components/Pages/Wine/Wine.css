@@ -17,10 +17,11 @@ h3 {
 h5 {
     color: white;
 }
-.carousel {
+carousel {
     background: rgba(231, 231, 186, 0.55);
     height: 250px;
     width: 100%;
+}
   .jumbotron {
     background: rgba(47, 97, 64, 0.95);
 }
