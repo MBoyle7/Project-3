@@ -22,16 +22,16 @@ class App extends Component {
       <div className="app-container">
       <Router>
         <Security
-          issuer='https://dev-122012.oktapreview.com/oauth2/default'
+          issuer='https://dev-122012.okta.com/oauth2/default'
           client_id='0oahjmwthXxO2IB8f356'
-          redirect_uri={window.location.origin + '/Members'}
-          onAuthRequired={onAuthRequired}
+          redirect_uri={window.location.origin + '/implicit/callback'}
+          // onAuthRequired={onAuthRequired}
         >
           <div className='App'>
             <Navbar />
             <div className='container'>
               <Route path='/' exact component={Home} />
-              <Route exact path='/' component={Home} />
+              {/* <Route exact path='/' component={Home} /> */}
               <SecureRoute path='/Members' exact component={Members} />
               <Route
                 path='/login'
