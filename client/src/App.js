@@ -31,6 +31,7 @@ class App extends Component {
             <Navbar />
             <div className='container'>
               <Route path='/' exact component={Home} />
+              {/* <Route exact path='/' component={Home} /> */}
               <SecureRoute path='/Members' exact component={Members} />
               <Route
                 path='/login'
@@ -38,7 +39,7 @@ class App extends Component {
                   <Login baseUrl='https://dev-122012.oktapreview.com' />
                 )}
               />
-              {/* <Route exact path='/' component={Home} /> */}
+              
 
               <Route path='/wine' component={Wine} />
 
