@@ -6,15 +6,15 @@ export default {
     return axios.get('/api/wine')
   },
   // Gets the book with the given id
-  getBook: function (id) {
+  getBeer: function (id) {
     return axios.get('/api/wine/' + id)
   },
   // Deletes the book with the given id
-  deleteBook: function (id) {
+  deleteBeer: function (id) {
     return axios.delete('/api/wine/' + id)
   },
   // Saves a book to the database
-  saveBook: function (bookData) {
+  saveBeer: function (bookData) {
     return axios.post('/api/wine', bookData)
   },
   getBeer: function (queryTem) {

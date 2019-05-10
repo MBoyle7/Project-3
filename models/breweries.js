@@ -3,11 +3,12 @@ const Schema = mongoose.Schema;
 
 const breweriesSchema = new Schema({
   name: { type: String, required: true },
-  type: { type: String, required: true },
-  synopsis: String,
+  website_url: { type: String, required: true },
+  city: String,
+  state: String,
   date: { type: Date, default: Date.now }
 });
 
-const Breweries = mongoose.model("Beer", breweriesSchema);
+const Breweries = mongoose.model("Breweries", breweriesSchema);
 
 module.exports = Breweries;
