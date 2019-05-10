@@ -3,8 +3,10 @@ const Schema = mongoose.Schema;
 
 const beerSchema = new Schema({
   name: { type: String, required: true },
-  type: { type: String, required: true },
-  synopsis: String,
+  abvMax: String,
+  ibuMax: String,
+  category: { type: String, required: true },
+  description: String,
   date: { type: Date, default: Date.now }
 });
 
