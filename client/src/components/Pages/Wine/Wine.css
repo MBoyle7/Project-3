@@ -1,9 +1,14 @@
 .app-picture {
     background-image:url("https://www.insidesources.com/wp-content/uploads/2018/07/bigstock-The-Beer-Taps-In-A-Pub-Nobody-227877709.jpg");
     background-size: cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 200vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-top:75px;
 }
 h1 {
     float:left;
