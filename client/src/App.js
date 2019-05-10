@@ -22,9 +22,9 @@ class App extends Component {
       <div className="app-container">
       <Router>
         <Security
-          issuer='https://dev-122012.okta.com/oauth2/default'
+          issuer='https://dev-122012.oktapreview.com/oauth2/default'
           client_id='0oahjmwthXxO2IB8f356'
-          redirect_uri='https://fierce-dusk-27663.herokuapp.com/implicit/callback'
+          redirect_uri={window.location.origin + '/Members'}
           onAuthRequired={onAuthRequired}
         >
           <div className='App'>
@@ -36,7 +36,7 @@ class App extends Component {
               <Route
                 path='/login'
                 render={() => (
-                  <Login baseUrl='https://dev-122012.okta.com' />
+                  <Login baseUrl='https://dev-122012.oktapreview.com' />
                 )}
               />
               
