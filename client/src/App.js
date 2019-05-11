@@ -31,7 +31,7 @@ class App extends Component {
             <Navbar />
             <div className='container'>
               <Route path='/' exact component={Home} />
-              {/* <Route exact path='/' component={Home} /> */}
+              <Route exact path='/' component={Home} />
               <SecureRoute path='/Members' exact component={Members} />
               <Route
                 path='/login'
