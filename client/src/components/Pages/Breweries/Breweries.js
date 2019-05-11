@@ -81,6 +81,7 @@ export default class Breweries extends Component {
       return <div>Loading...</div>
     } else {
       return (
+        <div className="brew">
         <Container>
           <Jumbotron>
             <h1>Breweries</h1>
@@ -126,6 +127,7 @@ export default class Breweries extends Component {
           </MapContainer>
         
         </Container>
+        </div>
       )
     }
   }

@@ -10,12 +10,16 @@ import './App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Wine from './components/Pages/Wine/Wine'
-
+import './App.css'
 import Breweries from './components/Pages/Breweries/Breweries'
 // import MyNavbar from './components/MyNavbar'
 // import { isTemplateElement } from '@babel/types';
 
-import './App.css'
+function onAuthRequired({ history }) {
+  history.push('/login')
+}
+
+
 class App extends Component {
   render () {
     return (
@@ -25,18 +29,18 @@ class App extends Component {
           issuer='https://dev-122012.okta.com/oauth2/default'
           client_id='0oahjmwthXxO2IB8f356'
           redirect_uri={window.location.origin + '/implicit/callback'}
-          // onAuthRequired={onAuthRequired}
+          onAuthRequired={onAuthRequired}
         >
           <div className='App'>
             <Navbar />
             <div className='container'>
-              <Route path='/' exact component={Home} />
+              {/* <Route path='/' exact component={Home} /> */}
               <Route exact path='/' component={Home} />
               <SecureRoute path='/Members' exact component={Members} />
               <Route
                 path='/login'
                 render={() => (
-                  <Login baseUrl='https://dev-122012.oktapreview.com' />
+                  <Login baseUrl='https://dev-122012.okta.com' />
                 )}
               />
               

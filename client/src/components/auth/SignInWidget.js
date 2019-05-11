@@ -10,7 +10,7 @@ class SignInWidget extends Component {
     this.widget = new OktaSignIn({
       baseUrl: this.props.baseUrl,
       logo: 'logo.png',
-      redirectUri: "/",
+      redirectUri: "https://fierce-dusk-27663.herokuapp.com/implicit/callback",
     });
     this.widget.renderEl({ el }, this.props.onSuccess, this.props.onError);
   }
