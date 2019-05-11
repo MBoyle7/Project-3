@@ -98,6 +98,9 @@ export default class Beer extends Component {
                      <br></br>
                      Brewery:
                      {beer.category.name}
+                     Description: 
+                     <br></br>
+                     {beer.description}
                    </strong>
                  </Link>
                </ListItem>

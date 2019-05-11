@@ -7,7 +7,7 @@ router.get('/api/beers', (req, res) => {
   console.log(req.query)
   var beerURL = `https://sandbox-api.brewerydb.com/v2/search/style?q=${
     req.query.beer
-  }&key=${key}`
+  }&key=${key}&withDescriptions=Y`
   console.log(beerURL)
   axios
     .get(beerURL)
