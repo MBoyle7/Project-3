@@ -25,33 +25,33 @@ class App extends Component {
     return (
       <div className="app-container">
       <Router>
-        <Security
+        {/* <Security
           issuer='https://dev-122012.okta.com/oauth2/default'
           client_id='0oahjmwthXxO2IB8f356'
           redirect_uri={window.location.origin + '/implicit/callback'}
           onAuthRequired={onAuthRequired}
-        >
+        > */}
           <div className='App'>
             <Navbar />
             <div className='container'>
               {/* <Route path='/' exact component={Home} /> */}
-              <Route exact path='/' component={Home} />
-              <SecureRoute path='/Members' exact component={Members} />
+              <Route exact path='/' component={Members} />
+              {/* <SecureRoute path='/Members' exact component={Members} />
               <Route
                 path='/login'
                 render={() => (
-                  <Login baseUrl='https://dev-122012.okta.com' />
+                  <Login baseUrl='https://dev-122012.oktapreview.com' /> */}
                 )}
               />
               
-
+<Route path='/members' component={Members} />
               <Route path='/wine' component={Wine} />
 
               <Route path='/breweries' component={Breweries} />
-              <Route path='/implicit/callback' component={ImplicitCallback} />
+              {/* <Route path='/implicit/callback' component={ImplicitCallback} /> */}
             </div>
           </div>
-        </Security>
+        {/* </Security> */}
       </Router>
       </div>
     )
