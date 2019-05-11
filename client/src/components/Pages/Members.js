@@ -6,28 +6,28 @@ import winepic from './assets/wineImg.jpg'
 import liqpic from './assets/BreweriesImg.jpg'
 import beerpic from './assets/beerImg.jpg'
 class Members extends Component {
-  state = {
-    currentUserName: "",
-    currentUserEmail: ""
-  };
+  // state = {
+  //   currentUserName: "",
+  //   currentUserEmail: ""
+  // };
 
-  componentDidMount() {
-    const idToken = JSON.parse(localStorage.getItem("okta-token-storage"));
-    this.setState({
-      currentUserEmail: idToken.idToken.claims.email,
-      currentUserName: idToken.idToken.claims.name
-    });
-  }
+  // componentDidMount() {
+  //   const idToken = JSON.parse(localStorage.getItem("okta-token-storage"));
+  //   this.setState({
+  //     currentUserEmail: idToken.idToken.claims.email,
+  //     currentUserName: idToken.idToken.claims.name
+  //   });
+  // }
 
   render() {
    
-    const { currentUserEmail, currentUserName } = this.state;
+    // const { currentUserEmail, currentUserName } = this.state;
 
     return (
      <div className = "hopps">
       <Container>
         <Jumbotron>
-          <h2>Welcome {currentUserName} to BoozeIt!</h2>
+          <h2>Welcome to BoozeIt!</h2>
           {/* <h3>Email: {currentUserEmail}</h3> */}
           <p>Find And Track Your Favorite Adult Beverages.</p>
           <Link to="/">

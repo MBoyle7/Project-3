@@ -41,30 +41,26 @@ export default class Beer extends Component {
   render () {
     const { isLoaded, beers } = this.state
     return (
-
-      <div className="app-picture">
-
-      
-
-      <Carousel class ="carousel">
-      
-       <h1>What Care I How Time Advances? I Am Drinking Ale Today
-       <br></br><br></br><br></br>
-         ~Edgar Allen Poe
-       </h1>
-        <h1>He Was A Wise Man Who Invented Beer.
+      <div className = "app-picture">
+      <Carousel class = "carousel">
+      <h1> What Care I How Time Advances? I am Drinking Ale Today
+        <br></br><br></br><br></br>
+        ~Edgar Allen Poe
+      </h1>
+      <h1>He Was A Wise Man Who Invented Beer.
         <br></br><br></br><br></br>
           ~ Plato
           </h1>
       <h1>Beer Is Proof That God Loves Us And Wants Us To Be Happy
-        <br></br><br></br><br></br>
-        ~ Ben Franklin
+      <br></br><br></br><br></br>
+      ~Ben Franklin
       </h1>
+      
     </Carousel>
   
       <Jumbotron>
        
-        <h5>Search For Your New Favorite Beer Here!</h5>
+        <h5>Search for your new favorite beer here!</h5>
        
         <br />
         <form onSubmit={this.handleSubmit}>
@@ -107,12 +103,9 @@ export default class Beer extends Component {
               ))}
             </ul>
           </div>
-          
         }
-        
       </Jumbotron>
-     
       </div>
-      ) 
+      )
   }
 }
