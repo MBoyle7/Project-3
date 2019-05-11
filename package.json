@@ -25,6 +25,7 @@
     "google-maps": "^3.3.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.5.3",
+    "node": "^12.2.0",
     "react-maps": "^0.4.0",
     "wineapi": "^1.0.1"
   }
